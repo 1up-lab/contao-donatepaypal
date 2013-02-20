@@ -19,7 +19,7 @@
     <?php endif; ?>
 
     <div class=""<?php if ($this->margin): ?> style="<?php echo $this->margin; ?>"<?php endif; ?>>
-        <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <div class="formbody">
                 <?php foreach ($this->fields as $objWidget): ?>
                     <div class="widget">
