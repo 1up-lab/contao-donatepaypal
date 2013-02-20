@@ -14,13 +14,13 @@
 -- Table `tl_module`
 --
 CREATE TABLE `tl_module` (
-  `donate_currency_code` varchar(10) NOT NULL default '',
-  `donate_address` varchar(255) NOT NULL default '',
-  `donate_total` varchar(255) NOT NULL default '',
-  `donate_hardtotal` char(1) NOT NULL default '',
-  `donate_javascript` char(1) NOT NULL default '',
-  `donate_message` varchar(255) NOT NULL default '',
-  `donate_thanks` int(10) unsigned NOT NULL default '0',
+  `donatepaypal_currency_code` varchar(10) NOT NULL default '',
+  `donatepaypal_address` varchar(255) NOT NULL default '',
+  `donatepaypal_total` varchar(255) NOT NULL default '',
+  `donatepaypal_hardtotal` char(1) NOT NULL default '',
+  `donatepaypal_javascript` char(1) NOT NULL default '',
+  `donatepaypal_message` varchar(255) NOT NULL default '',
+  `donatepaypal_thanks` int(10) unsigned NOT NULL default '0',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -31,11 +31,11 @@ CREATE TABLE `tl_module` (
 --
 
 CREATE TABLE `tl_content` (
-  `donate_currency_code` varchar(10) NOT NULL default '',
-  `donate_address` varchar(255) NOT NULL default '',
-  `donate_total` varchar(255) NOT NULL default '',
-  `donate_hardtotal` char(1) NOT NULL default '',
-  `donate_javascript` char(1) NOT NULL default '',
-  `donate_message` varchar(255) NOT NULL default '',
-  `donate_thanks` int(10) unsigned NOT NULL default '0',
+  `donatepaypal_currency_code` varchar(10) NOT NULL default '',
+  `donatepaypal_address` varchar(255) NOT NULL default '',
+  `donatepaypal_total` varchar(255) NOT NULL default '',
+  `donatepaypal_hardtotal` char(1) NOT NULL default '',
+  `donatepaypal_javascript` char(1) NOT NULL default '',
+  `donatepaypal_message` varchar(255) NOT NULL default '',
+  `donatepaypal_thanks` int(10) unsigned NOT NULL default '0',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
