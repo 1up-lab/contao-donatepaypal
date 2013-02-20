@@ -54,7 +54,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_total'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['total'],
     'exclude'                 => true,
     'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
+    'eval'                    => array('mandatory'=>true, 'rgxp'=>'digit', 'tl_class'=>'w50')
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_currency_code'] = array

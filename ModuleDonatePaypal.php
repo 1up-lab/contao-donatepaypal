@@ -29,10 +29,36 @@
  */
 
 /**
- * Legends
+ * Class ModuleDonatePaypal
+ *
+ * Front end module "donatepaypal".
+ * @copyright  1up GmbH - David Greminger / Flavian Sierk
+ * @author     David Greminger
+ * @package    donatepaypal
  */
-$GLOBALS['TL_LANG']['tl_content']['donatepaypal_legend']    = 'PayPal Donate Button';
+class ModuleDonatePaypal extends Module
+{
+    /**
+     * Template
+     * @var string
+     */
+    protected $strTemplate = 'mod_donatepaypal';
 
-/**
- * Fields
- */
+    /**
+     * Generates content element
+     * @return mixed
+     */
+    public function generate()
+    {
+        return parent::generate();
+    }
+
+    /**
+     * Parses the template
+     * @return string
+     */
+    protected function compile()
+    {
+
+    }
+}

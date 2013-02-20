@@ -35,6 +35,18 @@ $GLOBALS['TL_LANG']['CTE']['donatepaypal']                  = array('PayPal Spen
 $GLOBALS['TL_LANG']['FMD']['donatepaypal']                  = array('PayPal Spenden', 'Fügt einen PayPal Spenden Button ein.');
 
 /**
+ * Fields
+ */
+$GLOBALS['TL_LANG']['donatepaypal']['donate']               = 'Spenden';
+$GLOBALS['TL_LANG']['donatepaypal']['donate_amount']        = 'Betrag (%s)';
+$GLOBALS['TL_LANG']['donatepaypal']['address']              = array('PayPal ID', 'Ihre Paypal ID.');
+$GLOBALS['TL_LANG']['donatepaypal']['message']              = array('Transaktionstext', 'Text, welcher bei der Transaktion erscheint.');
+$GLOBALS['TL_LANG']['donatepaypal']['total']                = array('Betrag', 'Wählen Sie einen Standardbetrag.');
+$GLOBALS['TL_LANG']['donatepaypal']['currency_code']        = array('Währung', 'Wählen Sie die Währung, in welcher gespendet werden soll.');
+$GLOBALS['TL_LANG']['donatepaypal']['javascript']           = array('Javascript deaktivieren', 'Deaktiviert die Ausgabe mittels Javascript (Toggler).');
+$GLOBALS['TL_LANG']['donatepaypal']['thanks']               = array('Dankesseite', 'Seite, auf welche der Besucher von PayPal zurückgelangt.');
+
+/**
  * Labels
  */
 $GLOBALS['TL_LANG']['donatepaypal']['currencies']['USD']    = 'USD - US Dollar';
