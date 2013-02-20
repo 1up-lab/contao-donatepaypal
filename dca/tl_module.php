@@ -27,3 +27,55 @@
  * @license    LGPL
  * @filesource
  */
+
+/**
+ * Add palettes to tl_module
+ */
+$GLOBALS['TL_DCA']['tl_module']['palettes']['donatepaypal']    = '{type_legend},type,headline;{donatepaypal_legend},donatepaypal_address,donatepaypal_message,donatepaypal_currency_code,donatepaypal_total,donatepaypal_javascript,donatepaypal_thanks;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+
+/**
+ * Fields for the palette
+ */
+$GLOBALS['TL_DCA']['tl_module']['fields']['donatepaypal_address'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['address'],
+    'exclude'                 => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['donatepaypal_message'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['message'],
+    'exclude'                 => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['donatepaypal_total'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['total'],
+    'exclude'                 => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['donatepaypal_currency_code'] = array
+(
+    'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['currency_code'],
+    'exclude'                 => true,
+    'inputType'               => 'select',
+    'options'                 => $currencies,
+    'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50')
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['donatepaypal_javascript'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['javascript'],
+    'exclude'                 => true,
+    'inputType'               => 'checkbox',
+    'eval'                    => array('tl_class'=>'clr')
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['donatepaypal_thanks'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['thanks'],
+    'exclude'                 => true,
+    'inputType'               => 'pageTree',
+    'eval'                    => array('mandatory'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr')
+);

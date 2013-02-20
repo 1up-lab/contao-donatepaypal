@@ -32,6 +32,7 @@
  * Miscellaneous
  */
 $GLOBALS['TL_LANG']['CTE']['donatepaypal']                  = array('PayPal Spenden', 'Fügt einen PayPal Spenden Button ein.');
+$GLOBALS['TL_LANG']['FMD']['donatepaypal']                  = array('PayPal Spenden', 'Fügt einen PayPal Spenden Button ein.');
 
 /**
  * Labels
@@ -59,4 +60,3 @@ $GLOBALS['TL_LANG']['donatepaypal']['currencies']['SEK']    = 'SEK - Schwedische
 $GLOBALS['TL_LANG']['donatepaypal']['currencies']['CHF']    = 'CHF - Schweizer Franken';
 $GLOBALS['TL_LANG']['donatepaypal']['currencies']['TWD']    = 'TWD - Taiwan-Dollar';
 $GLOBALS['TL_LANG']['donatepaypal']['currencies']['THB']    = 'THB - Baht';
-
