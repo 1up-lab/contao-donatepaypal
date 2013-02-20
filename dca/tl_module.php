@@ -31,7 +31,7 @@
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['donatepaypal']    = '{type_legend},type,headline;{donatepaypal_legend},donatepaypal_address,donatepaypal_message,donatepaypal_currency_code,donatepaypal_total,donatepaypal_javascript,donatepaypal_thanks;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['donatepaypal']    = '{type_legend},name,headline,type;{donatepaypal_legend},donatepaypal_address,donatepaypal_message,donatepaypal_currency_code,donatepaypal_total,donatepaypal_javascript,donatepaypal_thanks;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 /**
  * Fields for the palette
@@ -62,7 +62,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['donatepaypal_currency_code'] = array
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['currency_code'],
     'exclude'                 => true,
     'inputType'               => 'select',
-    'options'                 => $currencies,
+    'options'                 => $GLOBALS['TL_DCA']['donatepaypal'],
     'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50')
 );
 

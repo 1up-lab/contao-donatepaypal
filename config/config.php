@@ -38,3 +38,32 @@ $GLOBALS['FE_MOD']['miscellaneous']['donatepaypal'] = 'ModuleDonate';
  * Content elements
  */
 $GLOBALS['TL_CTE']['includes']['donatepaypal'] = 'ContentDonate';
+
+/**
+ * Some variables and definitions
+ */
+$GLOBALS['TL_DCA']['donatepaypal'] = $currencies = array(
+    'USD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['USD'],
+    'GBP' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['GBP'],
+    'AUD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['AUD'],
+    'BRL' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['BRL'],
+    'CAD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['CAD'],
+    'CZK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['CZK'],
+    'DKK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['DKK'],
+    'EUR' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['EUR'],
+    'HKD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['HKD'],
+    'HUF' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['HUF'],
+    'ILS' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['ILS'],
+    'JPY' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['JPY'],
+    'MYR' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['MYR'],
+    'MXN' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['MXN'],
+    'NZD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['NZD'],
+    'NOK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['NOK'],
+    'PHP' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['PHP'],
+    'PLN' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['PLN'],
+    'SGD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['SGD'],
+    'SEK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['SEK'],
+    'CHF' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['CHF'],
+    'TWD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['TWD'],
+    'THB' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['THB']
+);

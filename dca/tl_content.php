@@ -29,35 +29,6 @@
  */
 
 /**
- * Some variables and definitions
- */
-$currencies = array(
-    'USD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['USD'],
-    'GBP' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['GBP'],
-    'AUD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['AUD'],
-    'BRL' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['BRL'],
-    'CAD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['CAD'],
-    'CZK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['CZK'],
-    'DKK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['DKK'],
-    'EUR' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['EUR'],
-    'HKD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['HKD'],
-    'HUF' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['HUF'],
-    'ILS' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['ILS'],
-    'JPY' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['JPY'],
-    'MYR' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['MYR'],
-    'MXN' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['MXN'],
-    'NZD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['NZD'],
-    'NOK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['NOK'],
-    'PHP' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['PHP'],
-    'PLN' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['PLN'],
-    'SGD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['SGD'],
-    'SEK' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['SEK'],
-    'CHF' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['CHF'],
-    'TWD' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['TWD'],
-    'THB' => &$GLOBALS['TL_LANG']['donatepaypal']['currencies']['THB']
-);
-
-/**
  * Add palettes to tl_content
  */
 $GLOBALS['TL_DCA']['tl_content']['palettes']['donatepaypal']    = '{type_legend},type,headline;{donatepaypal_legend},donatepaypal_address,donatepaypal_message,donatepaypal_currency_code,donatepaypal_total,donatepaypal_javascript,donatepaypal_thanks;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
@@ -91,7 +62,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_currency_code'] = array
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['currency_code'],
     'exclude'                 => true,
     'inputType'               => 'select',
-    'options'                 => $currencies,
+    'options'                 => $GLOBALS['TL_DCA']['donatepaypal'],
     'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50')
 );
 
