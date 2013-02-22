@@ -59,6 +59,51 @@ class ModuleDonatePaypal extends Module
      */
     protected function compile()
     {
+        $arrFields = array();
 
+        $arrFields['amount'] = array (
+            'name' => 'amount',
+            'label' => sprintf($GLOBALS['TL_LANG']['donatepaypal']['donate_amount'], $this->donatepaypal_currency_code),
+            'inputType' => 'text',
+            'value' => $this->donatepaypal_total
+        );
+
+        foreach ($arrFields as $arrField)
+        {
+            $strClass = $GLOBALS['TL_FFL'][$arrField['inputType']];
+
+            // Continue if the class is not defined
+            if (!$this->classFileExists($strClass))
+            {
+                continue;
+            }
+
+            $arrField['eval']['required'] = $arrField['eval']['mandatory'];
+            $objWidget = new $strClass($this->prepareForWidget($arrField, $arrField['name'], $arrField['value']));
+            $arrWidgets[] = $objWidget;
+        }
+
+        $objPage = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")
+            ->limit(1)
+            ->execute($this->donatepaypal_thanks);
+
+        if ($objPage->numRows)
+        {
+            $strLink = $this->Environment->base . $this->generateFrontendUrl($objPage->row());
+        }
+
+        $this->Template->return 	= $strLink;
+        $this->Template->fields 	= $arrWidgets;
+        $this->Template->amount 	= $GLOBALS['TL_LANG']['donatepaypal']['donate_amount'];
+        $this->Template->donate 	= $GLOBALS['TL_LANG']['donatepaypal']['donate'];
+        $this->Template->email 		= $this->donatepaypal_address;
+        $this->Template->currency	= $this->donatepaypal_currency_code;
+        $this->Template->item 		= $this->donatepaypal_message;
+        $this->Template->ceID 		= $this->id;
+
+        if($this->donatepaypal_javascript != '1')
+        {
+            $this->Template->javascript = true;
+        }
     }
 }

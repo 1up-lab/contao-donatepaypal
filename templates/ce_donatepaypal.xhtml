@@ -1,0 +1,46 @@
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->javascript):?>
+        <script type="text/javascript">
+            window.addEvent('domready', function(){
+                var mySlide = new Fx.Slide('dtoggle<?php echo $this->ceID?>').hide();
+                $('dtoggler<?php echo $this->ceID?>').addEvent('click', function(e){
+                    e = new Event(e);
+                    mySlide.toggle();
+                    e.stop();
+                });
+            });
+        </script>
+        <div id="dtoggler<?php echo $this->ceID?>"><?php echo $this->donate;?></div>
+        <div id="dtoggle<?php echo $this->ceID?>" style="">
+    <?php endif;?>
+
+    <?php if ($this->headline): ?>
+        <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div class=""<?php if ($this->margin): ?> style="<?php echo $this->margin; ?>"<?php endif; ?>>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <div class="formbody">
+                <?php foreach ($this->fields as $objWidget): ?>
+                    <div class="widget">
+                        <?php echo $objWidget->generateLabel(); ?>
+                        <?php echo $objWidget->generateWithError(); ?>
+                    </div>
+                <?php endforeach; ?>
+                <input type="hidden" name="cmd" value="_donations">
+                <input type="hidden" name="business" value="<?php echo $this->email; ?>" />
+                <input type="hidden" name="item_name" value="<?php echo $this->item; ?>" />
+                <input type="hidden" name="currency_code" value="<?php echo $this->currency; ?>" />
+                <input type="hidden" name="return" value="<?php echo $this->return; ?>" />
+                <input type="hidden" name="rm" value="2" />
+                <div class="submit_container">
+                    <input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" style="border: 0;" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <?php if($this->javascript):?>
+        </div>
+    <?php endif;?>
+</div>
