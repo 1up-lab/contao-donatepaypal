@@ -31,13 +31,13 @@
 /**
  * Front end modules
  */
-$GLOBALS['FE_MOD']['miscellaneous']['donatepaypal'] = 'ModuleDonatePaypal';
+$GLOBALS['FE_MOD']['miscellaneous']['donatepaypal'] = 'ModuleDonatePayPal';
 
 
 /**
  * Content elements
  */
-$GLOBALS['TL_CTE']['includes']['donatepaypal'] = 'ContentDonatePaypal';
+$GLOBALS['TL_CTE']['includes']['donatepaypal'] = 'ContentDonatePayPal';
 
 /**
  * Some variables and definitions
