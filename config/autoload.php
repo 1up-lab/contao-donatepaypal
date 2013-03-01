@@ -25,8 +25,8 @@ ClassLoader::addNamespaces(array
  */
 ClassLoader::addClasses(array
 (
-    'Oneup\DonatePayPal\ContentDonatePayPal' => 'system/modules/donatepaypal/elements/ContentDonatePayPal.php',
-    'Oneup\DonatePayPal\ModuleDonatePayPal'  => 'system/modules/donatepaypal/modules/ModuleDonatePayPal.php',
+    'Oneup\DonatePayPal\ContentDonatePayPal' => 'system/modules/donate-paypal/elements/ContentDonatePayPal.php',
+    'Oneup\DonatePayPal\ModuleDonatePayPal'  => 'system/modules/donate-paypal/modules/ModuleDonatePayPal.php',
 ));
 
 
@@ -35,6 +35,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-    'ce_donatepaypal'  => 'system/modules/donatepaypal/templates',
-    'mod_donatepaypal' => 'system/modules/donatepaypal/templates',
+    'ce_donatepaypal'  => 'system/modules/donate-paypal/templates',
+    'mod_donatepaypal' => 'system/modules/donate-paypal/templates',
 ));
