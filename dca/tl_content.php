@@ -40,21 +40,24 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_address'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['address'],
     'exclude'                 => true,
     'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_message'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['message'],
     'exclude'                 => true,
     'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50')
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_total'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['total'],
     'exclude'                 => true,
     'inputType'               => 'text',
-    'eval'                    => array('mandatory'=>true, 'rgxp'=>'digit', 'tl_class'=>'w50')
+    'eval'                    => array('mandatory'=>true, 'rgxp'=>'digit', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_currency_code'] = array
@@ -63,19 +66,22 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_currency_code'] = array
     'exclude'                 => true,
     'inputType'               => 'select',
     'options'                 => $GLOBALS['TL_DCA']['donatepaypal'],
-    'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50')
+    'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+    'sql'                     => "varchar(10) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_javascript'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['javascript'],
     'exclude'                 => true,
     'inputType'               => 'checkbox',
-    'eval'                    => array('tl_class'=>'clr')
+    'eval'                    => array('tl_class'=>'clr'),
+    'sql'                     => "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['donatepaypal_thanks'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['donatepaypal']['thanks'],
     'exclude'                 => true,
     'inputType'               => 'pageTree',
-    'eval'                    => array('mandatory'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr')
+    'eval'                    => array('mandatory'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
+    'sql'                     => "int(10) unsigned NOT NULL default '0'"
 );
