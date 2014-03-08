@@ -37,7 +37,7 @@
  * @package    donatepaypal
  */
 
-namespace Oneup\DonatePayPal;
+namespace Oneup;
 
 class ContentDonatePayPal extends \ContentElement
 {
