@@ -16,7 +16,6 @@
 ClassLoader::addNamespaces(array
 (
     'Oneup',
-    'Oneup\DonatePayPal',
 ));
 
 
@@ -25,8 +24,8 @@ ClassLoader::addNamespaces(array
  */
 ClassLoader::addClasses(array
 (
-    'Oneup\DonatePayPal\ContentDonatePayPal' => 'system/modules/donate-paypal/elements/ContentDonatePayPal.php',
-    'Oneup\DonatePayPal\ModuleDonatePayPal'  => 'system/modules/donate-paypal/modules/ModuleDonatePayPal.php',
+    'Oneup\ContentDonatePayPal' => 'system/modules/donate-paypal/elements/ContentDonatePayPal.php',
+    'Oneup\ModuleDonatePayPal'  => 'system/modules/donate-paypal/modules/ModuleDonatePayPal.php',
 ));
 
 

@@ -36,7 +36,7 @@
  * @author     David Greminger
  * @package    donatepaypal
  */
-namespace Oneup\DonatePaypal;
+namespace Oneup;
 
 class ModuleDonatePaypal extends \Module
 {
